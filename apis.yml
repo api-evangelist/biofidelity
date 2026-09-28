@@ -1,23 +1,79 @@
 aid: biofidelity
+
 name: Biofidelity
-description: 'Biofidelity is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Biofidelity develops molecular technologies to simplify genomic analysis, enabling broader access to precision cancer diagnostics. Their platform offers products like Aspyre® for lung reagents and Enspyre® clinical testing, serving providers, laboratories, and biopharma with streamlined genomic testing solutions.'
+
 url: https://raw.githubusercontent.com/api-evangelist/biofidelity/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- Biotechnology
+- Genomics
+- Diagnostics
+- Healthcare
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/biofidelity-hosts.yml
+- type: Vendors
+  url: vendors/biofidelity-vendors.yml
+- type: TermsOfService
+  url: https://biofidelity.com/terms-of-use/
+- type: Security
+  url: https://biofidelity.com/security/
+- type: PrivacyPolicy
+  url: https://biofidelity.com/privacy-notice/
+- type: Newsroom
+  url: https://biofidelity.com/news/
+- type: DomainSecurity
+  url: security/biofidelity-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://biofidelity.com/
+- type: Documentation
+  url: https://biofidelity.com/resources/
+- type: Support
+  url: https://biofidelity.com/contact/
+- type: Blog
+  url: https://biofidelity.com/resources/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/biofidelity/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  method: derived
+  generated: '2026-09-28'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes developer documentation but serves no machine-readable contract from it
+  evidence:
+  - url: https://www.nasdaqprivatemarket.com/
+    status: 200
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
